@@ -13,7 +13,7 @@ const App = () => {
     return (
         <>
             <Toaster />
-            <BrowserRouter>
+            <BrowserRouter basename="/vcicd_front">
                 <Routes>
                     <Route path="/" element={<Root />} />
                     <Route path="/home" element={<LandingPage />} />
@@ -35,7 +35,7 @@ const Root = () => {
     return isAuthenticated ? (
         <Navigate to="/dashboard" />
     ) : (
-      <Navigate to="/home" />
+        <Navigate to="/home" />
     );
 }
 
